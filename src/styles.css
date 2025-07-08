@@ -1,0 +1,95 @@
+.resume {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  border: 2px double black;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-part {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.photo > img {
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content {
+  flex: 1;
+  min-width: 220px;
+  padding-left: 10px;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.summary,
+.project,
+.skills,
+.hobby,
+.declaration {
+  padding: 10px;
+  text-align: justify;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-part {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .photo > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    width: 95%;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .photo > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .summary,
+  .project,
+  .skills,
+  .hobby,
+  .declaration {
+    padding: 8px;
+  }
+}
